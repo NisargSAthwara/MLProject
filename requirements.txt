@@ -3,4 +3,9 @@ pandas
 matplotlib
 seaborn
 scikit-learn
--e .
+catboost
+xgboost
+# lightgbm
+# optuna
+# optuna-dashboard
+# -e .
