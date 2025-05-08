@@ -5,6 +5,7 @@ seaborn
 scikit-learn
 catboost
 xgboost
+dill
 # lightgbm
 # optuna
 # optuna-dashboard
