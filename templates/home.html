@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Exam Performance Indicator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        select, input {
+            margin: 5px 0;
+            padding: 5px;
+            width: 250px;
+        }
+        button {
+            padding: 7px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1><span style="color: blue;">Student Exam</span> Performance Indicator</h1>
+    <h2>Student Exam Performance Prediction</h2>
+
+    <form action="{{ url_for('predict_datapoint')}}" methos="post">
+        <label>Gender:</label><br>
+        <select>
+            <option>Select your Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select><br>
+
+        <label>Race or Ethnicity:</label><br>
+        <select>
+            <option>Select Ethnicity</option>
+            <option>Group A</option>
+            <option>Group B</option>
+            <option>Group C</option>
+            <option>Group D</option>
+            <option>Group E</option>
+        </select><br>
+
+        <label>Parental Level of Education:</label><br>
+        <select>
+            <option>Select Parent Education</option>
+            <option>Some high school</option>
+            <option>High school</option>
+            <option>Associate's degree</option>
+            <option>Bachelor's degree</option>
+            <option>Master's degree</option>
+        </select><br>
+
+        <label>Lunch Type:</label><br>
+        <select>
+            <option>Select Lunch Type</option>
+            <option>Standard</option>
+            <option>Free/Reduced</option>
+        </select><br>
+
+        <label>Test Preparation Course:</label><br>
+        <select>
+            <option>Select Test course</option>
+            <option>None</option>
+            <option>Completed</option>
+        </select><br>
+
+        <label>Writing Score out of 100:</label><br>
+        <input type="number" placeholder="Enter your writing score"><br>
+
+        <label>Reading Score out of 100:</label><br>
+        <input type="number" placeholder="Enter your reading score"><br>
+
+        <button type="button">Predict your Maths Score</button>
+    </form>
+
+    <h2>THE prediction is {{result}}</h2>
+
+</body>
+</html>

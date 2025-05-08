@@ -6,6 +6,7 @@ scikit-learn
 catboost
 xgboost
 dill
+Flask
 # lightgbm
 # optuna
 # optuna-dashboard
